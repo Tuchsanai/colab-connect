@@ -19,7 +19,6 @@ On Google Colab, first install the library and the run the code.
 
 
 
-
 ```python
 from colabconnect import colabconnect
 
