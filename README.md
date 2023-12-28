@@ -26,6 +26,12 @@ from colabconnect import colabconnect
 colabconnect()
 ```
 
+```
+code --install-extension ms-python.python
+code --install-extension ms-toolsai.jupyter
+code --install-extension github.copilot
+```
+
 1. After running the code, copy the given code, click the GitHub link and paste the code.
 <p align="center">
 <img width="965" alt="image" src="https://user-images.githubusercontent.com/8587189/232768841-fbd2e1bd-91d1-49ac-989e-277e50604209.png">
