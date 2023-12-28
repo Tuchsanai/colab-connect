@@ -70,9 +70,9 @@ def colabconnect() -> None:
 
     # To install Visual Studio Code (VS Code) extensions for Python extension Jupyter Notebook, Docker, and Copilot 
     print("Installing vscode extensions...")
-    run("code --install-extension ms-python.python")
-    run("code --install-extension ms-toolsai.jupyter")
-    run("code --install-extension github.copilot")
+    run("./code  tunnel --install-extension ms-python.python")
+    run("./code tunnel --install-extension ms-toolsai.jupyter")
+    run("./code tunnel --install-extension github.copilot")
 
     print("Starting the tunnel")
     start_tunnel()
