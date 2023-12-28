@@ -29,8 +29,3 @@ code --install-extension ms-python.python
 code --install-extension ms-toolsai.jupyter
 code --install-extension github.copilot
 ```
-
-5. You will be connected to the virtual machine and can access the folders. Open the `/colab` folder and store your code there for persistence on Google Drive. The workflow is similar to the Remote SSH plugin
-
-![image](https://user-images.githubusercontent.com/8587189/232769273-52d3e26a-3aec-436d-9b60-97e1d190ddf7.png)
-
