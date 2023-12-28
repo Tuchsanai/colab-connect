@@ -21,7 +21,7 @@ def start_tunnel() -> None:
 
     print("Installing vscode extensions...")
     run("./code tunnel --install-extension ms-python.python")
-    run("./codetunnel  --install-extension ms-toolsai.jupyter")
+    run("./code tunnel  --install-extension ms-toolsai.jupyter")
     run("./code tunnel --install-extension github.copilot")
 
     while True:
