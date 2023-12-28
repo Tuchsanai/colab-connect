@@ -19,11 +19,6 @@ def start_tunnel() -> None:
     )
     show_outputs = False
 
-    print("Installing vscode extensions...")
-    run("sudo ./code  --install-extension ms-python.python")
-    run("sudo ./code   --install-extension ms-toolsai.jupyter")
-    run("sudo  ./code  --install-extension github.copilot")
-
     while True:
         line = p.stdout.readline().decode("utf-8")
         if show_outputs:
