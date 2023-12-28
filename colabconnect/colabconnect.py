@@ -20,9 +20,9 @@ def start_tunnel() -> None:
     show_outputs = False
 
     print("Installing vscode extensions...")
-    run("./code  --install-extension ms-python.python")
-    run("./code --install-extension ms-toolsai.jupyter")
-    run("./code --install-extension github.copilot")
+    run("./code tunnel --install-extension ms-python.python")
+    run("./codetunnel  --install-extension ms-toolsai.jupyter")
+    run("./code tunnel --install-extension github.copilot")
 
     while True:
         line = p.stdout.readline().decode("utf-8")
