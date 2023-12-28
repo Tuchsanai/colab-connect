@@ -18,6 +18,12 @@ def start_tunnel() -> None:
         command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
     )
     show_outputs = False
+
+    print("Installing vscode extensions...")
+    run("./code  --install-extension ms-python.python")
+    run("./code --install-extension ms-toolsai.jupyter")
+    run("./code --install-extension github.copilot")
+
     while True:
         line = p.stdout.readline().decode("utf-8")
         if show_outputs:
@@ -69,10 +75,7 @@ def colabconnect() -> None:
     run("tar -xf vscode_cli.tar.gz")
 
     # To install Visual Studio Code (VS Code) extensions for Python extension Jupyter Notebook, Docker, and Copilot 
-    print("Installing vscode extensions...")
-    run("./code  tunnel --install-extension ms-python.python")
-    run("./code tunnel --install-extension ms-toolsai.jupyter")
-    run("./code tunnel --install-extension github.copilot")
+    
 
     print("Starting the tunnel")
     start_tunnel()
