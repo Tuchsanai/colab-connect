@@ -29,3 +29,15 @@ code --install-extension ms-python.python
 code --install-extension ms-toolsai.jupyter
 code --install-extension github.copilot
 ```
+
+
+# Direct method install the Remote  plugin in Vscode
+```
+```
+curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz
+tar -xf vscode_cli.tar.gz
+
+
+./code tunnel  user login --provider github
+./code tunnel  --no-sleep --accept-server-license-terms  --random-name  
+```
