@@ -32,16 +32,23 @@ code --install-extension github.copilot
 
 
 # Direct method install the Remote  plugin in Vscode
+
+## install as service
 ```
 
 curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz
 tar -xf vscode_cli.tar.gz
 
-code tunnel service install
-sudo systemctl daemon-reload
-sudo systemctl enable code-tunnel.service
-sudo systemctl start code-tunnel.service
+./code tunnel  user login --provider github
+./code tunnel service install --accept-server-license-terms 
+sudo loginctl enable-linger $USER
+```
 
+## install as user
+```
+
+curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz
+tar -xf vscode_cli.tar.gz
 
 ./code tunnel  user login --provider github
 ./code tunnel  --no-sleep --accept-server-license-terms  --random-name  
