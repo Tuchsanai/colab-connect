@@ -37,6 +37,11 @@ code --install-extension github.copilot
 curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz
 tar -xf vscode_cli.tar.gz
 
+code tunnel service install
+sudo systemctl daemon-reload
+sudo systemctl enable code-tunnel.service
+sudo systemctl start code-tunnel.service
+
 
 ./code tunnel  user login --provider github
 ./code tunnel  --no-sleep --accept-server-license-terms  --random-name  
